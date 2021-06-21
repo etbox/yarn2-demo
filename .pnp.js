@@ -33,6 +33,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "lds",
         "reference": "workspace:packages/lds"
+      },
+      {
+        "name": "worktree",
+        "reference": "workspace:packages/worktree"
+      },
+      {
+        "name": "react16",
+        "reference": "workspace:packages/worktree/packages/react16"
       }
     ],
     "enableTopLevelFallback": true,
@@ -41,6 +49,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["import-libs", ["workspace:packages/import-libs"]],
       ["jq", ["workspace:packages/jq"]],
       ["lds", ["workspace:packages/lds"]],
+      ["react16", ["workspace:packages/worktree/packages/react16"]],
+      ["worktree", ["workspace:packages/worktree"]],
       ["yarn2-demo", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -86,6 +96,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["js-tokens", [
+        ["npm:4.0.0", {
+          "packageLocation": "./.yarn/cache/js-tokens-npm-4.0.0-0ac852e9e2-1fc4e4667a.zip/node_modules/js-tokens/",
+          "packageDependencies": [
+            ["js-tokens", "npm:4.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["lds", [
         ["workspace:packages/lds", {
           "packageLocation": "./packages/lds/",
@@ -103,6 +122,116 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash", "npm:4.17.21"]
           ],
           "linkType": "HARD",
+        }]
+      ]],
+      ["loose-envify", [
+        ["npm:1.4.0", {
+          "packageLocation": "./.yarn/cache/loose-envify-npm-1.4.0-6307b72ccf-5c3b47bbe5.zip/node_modules/loose-envify/",
+          "packageDependencies": [
+            ["loose-envify", "npm:1.4.0"],
+            ["js-tokens", "npm:4.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["object-assign", [
+        ["npm:4.1.1", {
+          "packageLocation": "./.yarn/cache/object-assign-npm-4.1.1-1004ad6dec-66cf021898.zip/node_modules/object-assign/",
+          "packageDependencies": [
+            ["object-assign", "npm:4.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["prop-types", [
+        ["npm:15.7.2", {
+          "packageLocation": "./.yarn/cache/prop-types-npm-15.7.2-d7a04f2274-a440dd406c.zip/node_modules/prop-types/",
+          "packageDependencies": [
+            ["prop-types", "npm:15.7.2"],
+            ["loose-envify", "npm:1.4.0"],
+            ["object-assign", "npm:4.1.1"],
+            ["react-is", "npm:16.13.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["react", [
+        ["npm:16.14.0", {
+          "packageLocation": "./.yarn/cache/react-npm-16.14.0-932446ec69-2769580b22.zip/node_modules/react/",
+          "packageDependencies": [
+            ["react", "npm:16.14.0"],
+            ["loose-envify", "npm:1.4.0"],
+            ["object-assign", "npm:4.1.1"],
+            ["prop-types", "npm:15.7.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["react-dom", [
+        ["npm:16.14.0", {
+          "packageLocation": "./.yarn/cache/react-dom-npm-16.14.0-516a97ad33-a13558f0e7.zip/node_modules/react-dom/",
+          "packageDependencies": [
+            ["react-dom", "npm:16.14.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:68ffe0d4d215a34c49ac906e663498648008f9c407a916c9b1d2f86b5dc2d38e86ae41180f9a91d853b991680ebb3ee72c74fd9a4cca12da4e832ba0d7ece50b#npm:16.14.0", {
+          "packageLocation": "./.yarn/$$virtual/react-dom-virtual-69606b3547/0/cache/react-dom-npm-16.14.0-516a97ad33-a13558f0e7.zip/node_modules/react-dom/",
+          "packageDependencies": [
+            ["react-dom", "virtual:68ffe0d4d215a34c49ac906e663498648008f9c407a916c9b1d2f86b5dc2d38e86ae41180f9a91d853b991680ebb3ee72c74fd9a4cca12da4e832ba0d7ece50b#npm:16.14.0"],
+            ["@types/react", null],
+            ["loose-envify", "npm:1.4.0"],
+            ["object-assign", "npm:4.1.1"],
+            ["prop-types", "npm:15.7.2"],
+            ["react", "npm:16.14.0"],
+            ["scheduler", "npm:0.19.1"]
+          ],
+          "packagePeers": [
+            "@types/react",
+            "react"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["react-is", [
+        ["npm:16.13.1", {
+          "packageLocation": "./.yarn/cache/react-is-npm-16.13.1-a9b9382b4f-11bcf1267a.zip/node_modules/react-is/",
+          "packageDependencies": [
+            ["react-is", "npm:16.13.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["react16", [
+        ["workspace:packages/worktree/packages/react16", {
+          "packageLocation": "./packages/worktree/packages/react16/",
+          "packageDependencies": [
+            ["react16", "workspace:packages/worktree/packages/react16"],
+            ["lds", "workspace:packages/lds"],
+            ["react", "npm:16.14.0"],
+            ["react-dom", "virtual:68ffe0d4d215a34c49ac906e663498648008f9c407a916c9b1d2f86b5dc2d38e86ae41180f9a91d853b991680ebb3ee72c74fd9a4cca12da4e832ba0d7ece50b#npm:16.14.0"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["scheduler", [
+        ["npm:0.19.1", {
+          "packageLocation": "./.yarn/cache/scheduler-npm-0.19.1-a4dd0ffd3a-804f990b9f.zip/node_modules/scheduler/",
+          "packageDependencies": [
+            ["scheduler", "npm:0.19.1"],
+            ["loose-envify", "npm:1.4.0"],
+            ["object-assign", "npm:4.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["worktree", [
+        ["workspace:packages/worktree", {
+          "packageLocation": "./packages/worktree/",
+          "packageDependencies": [
+            ["worktree", "workspace:packages/worktree"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["yarn2-demo", [
