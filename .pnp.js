@@ -70,9 +70,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["workspace:packages/import-libs", {
           "packageLocation": "./packages/import-libs/",
           "packageDependencies": [
-            ["import-libs", "workspace:packages/import-libs"],
-            ["jq", "workspace:packages/jq"],
-            ["lds", "workspace:packages/lds"]
+            ["import-libs", "workspace:packages/import-libs"]
           ],
           "linkType": "SOFT",
         }]
@@ -81,19 +79,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["workspace:packages/jq", {
           "packageLocation": "./packages/jq/",
           "packageDependencies": [
-            ["jq", "workspace:packages/jq"],
-            ["jquery", "npm:3.6.0"]
+            ["jq", "workspace:packages/jq"]
           ],
           "linkType": "SOFT",
-        }]
-      ]],
-      ["jquery", [
-        ["npm:3.6.0", {
-          "packageLocation": "./.yarn/cache/jquery-npm-3.6.0-ca7872bdbb-a0a819022a.zip/node_modules/jquery/",
-          "packageDependencies": [
-            ["jquery", "npm:3.6.0"]
-          ],
-          "linkType": "HARD",
         }]
       ]],
       ["js-tokens", [
