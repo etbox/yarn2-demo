@@ -1,3 +1,6 @@
 {
-  "name": "yarn2-demo"
+  "name": "yarn2-demo",
+  "workspaces": [
+    "packages/*"
+  ]
 }
