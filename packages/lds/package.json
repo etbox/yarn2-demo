@@ -4,6 +4,7 @@
     "lodash": "^4.17.21"
   },
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "zip": "node zip.js"
   }
 }
