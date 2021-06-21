@@ -23,6 +23,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:."
       },
       {
+        "name": "import-libs",
+        "reference": "workspace:packages/import-libs"
+      },
+      {
         "name": "jq",
         "reference": "workspace:packages/jq"
       },
@@ -34,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
+      ["import-libs", ["workspace:packages/import-libs"]],
       ["jq", ["workspace:packages/jq"]],
       ["lds", ["workspace:packages/lds"]],
       ["yarn2-demo", ["workspace:."]]
@@ -47,6 +52,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["import-libs", [
+        ["workspace:packages/import-libs", {
+          "packageLocation": "./packages/import-libs/",
+          "packageDependencies": [
+            ["import-libs", "workspace:packages/import-libs"],
+            ["jq", "workspace:packages/jq"],
+            ["lds", "workspace:packages/lds"]
           ],
           "linkType": "SOFT",
         }]

@@ -1,0 +1,10 @@
+{
+  "name": "import-libs",
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "jq": "workspace:packages/jq",
+    "lds": "workspace:packages/lds"
+  }
+}

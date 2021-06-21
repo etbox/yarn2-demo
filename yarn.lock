@@ -5,6 +5,15 @@ __metadata:
   version: 4
   cacheKey: 7
 
+"import-libs@workspace:packages/import-libs":
+  version: 0.0.0-use.local
+  resolution: "import-libs@workspace:packages/import-libs"
+  dependencies:
+    jq: "workspace:packages/jq"
+    lds: "workspace:packages/lds"
+  languageName: unknown
+  linkType: soft
+
 "jq@workspace:packages/jq":
   version: 0.0.0-use.local
   resolution: "jq@workspace:packages/jq"
