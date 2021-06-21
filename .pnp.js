@@ -25,12 +25,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "jq",
         "reference": "workspace:packages/jq"
+      },
+      {
+        "name": "lds",
+        "reference": "workspace:packages/lds"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)|$))$)",
     "fallbackExclusionList": [
       ["jq", ["workspace:packages/jq"]],
+      ["lds", ["workspace:packages/lds"]],
       ["yarn2-demo", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -61,6 +66,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/jquery-npm-3.6.0-ca7872bdbb-a0a819022a.zip/node_modules/jquery/",
           "packageDependencies": [
             ["jquery", "npm:3.6.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["lds", [
+        ["workspace:packages/lds", {
+          "packageLocation": "./packages/lds/",
+          "packageDependencies": [
+            ["lds", "workspace:packages/lds"],
+            ["lodash", "npm:4.17.21"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["lodash", [
+        ["npm:4.17.21", {
+          "packageLocation": "./.yarn/cache/lodash-npm-4.17.21-6382451519-4983720b9a.zip/node_modules/lodash/",
+          "packageDependencies": [
+            ["lodash", "npm:4.17.21"]
           ],
           "linkType": "HARD",
         }]

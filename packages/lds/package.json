@@ -1,7 +1,7 @@
 {
-  "name": "jq",
+  "name": "lds",
   "dependencies": {
-    "jquery": "^3.6.0"
+    "lodash": "^4.17.21"
   },
   "scripts": {
     "start": "node ."
