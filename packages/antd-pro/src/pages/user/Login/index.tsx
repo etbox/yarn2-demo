@@ -13,6 +13,7 @@ import { useIntl, Link, history, FormattedMessage, SelectLang, useModel } from '
 import Footer from '@/components/Footer';
 import { login } from '@/services/ant-design-pro/api';
 import { getFakeCaptcha } from '@/services/ant-design-pro/login';
+import { Button } from 'react16'
 
 import styles from './index.less';
 
@@ -88,6 +89,7 @@ const Login: React.FC = () => {
 
   return (
     <div className={styles.container}>
+      <Button>Button React Version: {React.version}</Button>
       <div className={styles.lang} data-lang>
         {SelectLang && <SelectLang />}
       </div>
