@@ -3966,6 +3966,7 @@ __metadata:
     express: ^4.17.1
     gh-pages: ^3.0.0
     jsdom-global: ^3.0.2
+    lds: "workspace:packages/lds"
     lint-staged: ^10.0.0
     lodash: ^4.17.11
     mockjs: ^1.0.1-beta3
@@ -11364,7 +11365,7 @@ fsevents@^1.2.7:
   version: 0.0.0-use.local
   resolution: "lds@workspace:packages/lds"
   dependencies:
-    lodash: ^4.17.21
+    lodash: ^3.0.0
   languageName: unknown
   linkType: soft
 
@@ -11627,6 +11628,13 @@ fsevents@^1.2.7:
   version: 4.2.0
   resolution: "lodash.zip@npm:4.2.0"
   checksum: 5c3c9e7f6fad07029afd816e5d2b0b8af3ab5dd8b181f76acdd900ec3bc48c413c32bdff480a057787c0c12b25f9fa34e27affe410cc071ffd74804a10918058
+  languageName: node
+  linkType: hard
+
+"lodash@npm:^3.0.0":
+  version: 3.10.1
+  resolution: "lodash@npm:3.10.1"
+  checksum: 0d90e79ce058c8d3e12a027a9fe7bc26107ec5c674c66bfe28c68931c12b7de2a5366477bd639adbf0e60407df3a259b77123c440e1fd2cec09ad1423b574a64
   languageName: node
   linkType: hard
 
